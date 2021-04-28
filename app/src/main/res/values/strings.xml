@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Final_Project</string>
+
+    <string name="Racquets">Racquets</string>
+    <string name="Strings">Strings</string>
+    <string name="Overgrips">Overgrips</string>
+    <string name="Settings">Settings</string>
+    <string name="Find">Find Courts</string>
+</resources>
