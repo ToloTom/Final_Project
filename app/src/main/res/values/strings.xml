@@ -1,9 +1,19 @@
 <resources>
     <string name="app_name">Final_Project</string>
-
     <string name="Racquets">Racquets</string>
     <string name="Strings">Strings</string>
     <string name="Overgrips">Overgrips</string>
     <string name="Settings">Settings</string>
     <string name="Find">Find Courts</string>
+    <string name="AddCart">Add To Cart</string>
+    <string name="cart">Cart</string>
+    <string name="request">Repair Request</string>
+    <string name="home">Home</string>
+    <string name="buyNow">Buy Now</string>
+    <string name="placeOrder">Place Order</string>
+    <string name="cont">Continue Shopping</string>
+    <string name="steps">Welcome to the RacketRestringers racket repair request page. Simply press the camera button and take a picture of your racket(s) and write a breif description about what you would like us to repair. Upon acceptance of racket repair service, we will follow up with the shipping instructions.</string>
+    <string name="camera">Camera</string>
+    <string name="submitrequest">Submit Request</string>
+    <string name="hint">What is in need of maintenance?</string>
 </resources>

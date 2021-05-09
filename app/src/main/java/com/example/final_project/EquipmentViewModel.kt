@@ -11,8 +11,8 @@ class EquipmentViewModel(private val repository: EquipmentRepository) : ViewMode
         repository.insertEquipment(equipment)
     }
 
-    fun updateEquipment(title: String, type: String, description: String, price: Double, id: Int) = viewModelScope.launch {
-        repository.updateEquipment(title, type, description, price, id)
+    fun updateEquipment(quantity: Int, id: Int) = viewModelScope.launch {
+        repository.updateEquipment(quantity, id)
     }
 
     fun deleteEquipment(id: Int) = viewModelScope.launch {
@@ -20,9 +20,10 @@ class EquipmentViewModel(private val repository: EquipmentRepository) : ViewMode
     }
 
     fun getEquipment(id: Int) = repository.getEquipment(id).asLiveData()
+
 }
 
-class DreamViewModelFactory(private val repository: EquipmentRepository) : ViewModelProvider.Factory{
+class EquipmentViewModelFactory(private val repository: EquipmentRepository) : ViewModelProvider.Factory{
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if(modelClass.isAssignableFrom(EquipmentViewModel::class.java)){
             return EquipmentViewModel(repository) as T

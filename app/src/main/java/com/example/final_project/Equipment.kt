@@ -9,7 +9,7 @@ import androidx.room.PrimaryKey
 class Equipment(@ColumnInfo(name = "title") val title: String,
                 @ColumnInfo(name = "type") val type: String,
                 @ColumnInfo(name = "description") val info: String,
-                @ColumnInfo(name = "price") val price: Double) {
+                @ColumnInfo(name = "price") val price: Double,
+                @ColumnInfo(name = "quantity") val quantity: Int = 0) {
     @PrimaryKey(autoGenerate = true) var id: Int = 0;
 }
-

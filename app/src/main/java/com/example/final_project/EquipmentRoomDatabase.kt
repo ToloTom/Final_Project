@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 @Database(entities = arrayOf(Equipment::class), version = 1, exportSchema = false)
-abstract class EquipmentRoomDatabase : RoomDatabase() {
+public abstract class EquipmentRoomDatabase : RoomDatabase() {
     abstract fun equipmentDAO() : EquipmentDAO
 
     companion object{
@@ -16,6 +16,7 @@ abstract class EquipmentRoomDatabase : RoomDatabase() {
         fun getDatabase(context: Context): EquipmentRoomDatabase{
             return INSTANCE ?: synchronized(this){
                 val instance = Room.databaseBuilder(context.applicationContext, EquipmentRoomDatabase::class.java, "equipment_database").build()
+                INSTANCE = instance
                 return instance
             }
         }

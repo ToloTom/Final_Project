@@ -9,8 +9,8 @@ class EquipmentRepository(private val equipmentDAO: EquipmentDAO) {
         equipmentDAO.insertEquipment(equipment)
     }
 
-    suspend fun updateEquipment(title: String, type: String, description: String, price: Double, id: Int){
-        equipmentDAO.updateEquipment(title, type, description, price, id)
+    suspend fun updateEquipment(quantity: Int, id: Int){
+        equipmentDAO.updateEquipment(quantity, id)
     }
 
     suspend fun deleteEquipment(id: Int){
